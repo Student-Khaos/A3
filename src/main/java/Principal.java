@@ -16,13 +16,15 @@ public class Principal {
         int opcao;
 
         do {
-            System.out.println("\nMenu de Opções:");
+            System.out.println("----------------");
+            System.out.println("      Menu      ");
+            System.out.println("----------------");
             System.out.println("1. Inserir");
             System.out.println("2. Alterar");
             System.out.println("3. Remover");
             System.out.println("4. Listar");
             System.out.println("5. Sair");
-            System.out.print("Escolha uma opção: ");
+            System.out.print("Escolha uma opcao: ");
             opcao = scanner.nextInt();
             scanner.nextLine(); 
 
@@ -43,7 +45,7 @@ public class Principal {
                     System.out.println("Saindo do sistema...");
                     break;
                 default:
-                    System.out.println("Opção inválida.");
+                    System.out.println("Opcao invalida.");
             }
         } while (opcao != 5);
     }
@@ -58,7 +60,7 @@ public class Principal {
         System.out.print("Inserir Livro ou Revista (L/R): ");
         char tipo = scanner.nextLine().charAt(0);
 
-        System.out.print("Título: ");
+        System.out.print("Titulo: ");
         String titulo = scanner.nextLine();
         System.out.print("Autor: ");
         String autor = scanner.nextLine();
@@ -67,18 +69,18 @@ public class Principal {
         scanner.nextLine();
 
         if (tipo == 'L' || tipo == 'l') {
-            System.out.print("Gênero: ");
+            System.out.print("Genero: ");
             String genero = scanner.nextLine();
             Livro livro = new Livro(titulo, autor, ano, genero);
             biblioteca.inserirItem(livro);
         } else if (tipo == 'R' || tipo == 'r') {
-            System.out.print("Edição: ");
+            System.out.print("Edicao: ");
             int edicao = scanner.nextInt();
             scanner.nextLine(); 
             Revista revista = new Revista(titulo, autor, ano, edicao);
             biblioteca.inserirItem(revista);
         } else {
-            System.out.println("Tipo inválido.");
+            System.out.println("Tipo invalido.");
         }
     }
 
@@ -90,7 +92,7 @@ public class Principal {
         System.out.print("Alterar para Livro ou Revista (L/R): ");
         char tipo = scanner.nextLine().charAt(0);
 
-        System.out.print("Título: ");
+        System.out.print("Titulo: ");
         String titulo = scanner.nextLine();
         System.out.print("Autor: ");
         String autor = scanner.nextLine();
@@ -99,23 +101,23 @@ public class Principal {
         scanner.nextLine(); 
 
         if (tipo == 'L' || tipo == 'l') {
-            System.out.print("Gênero: ");
+            System.out.print("Genero: ");
             String genero = scanner.nextLine();
             Livro livro = new Livro(titulo, autor, ano, genero);
             biblioteca.alterarItem(index, livro);
         } else if (tipo == 'R' || tipo == 'r') {
-            System.out.print("Edição: ");
+            System.out.print("Edicao: ");
             int edicao = scanner.nextInt();
             scanner.nextLine();  
             Revista revista = new Revista(titulo, autor, ano, edicao);
             biblioteca.alterarItem(index, revista);
         } else {
-            System.out.println("Tipo inválido.");
+            System.out.println("Tipo invalido.");
         }
     }
 
     private static void removerItem(Biblioteca biblioteca, Scanner scanner) {
-        System.out.print("Índice do item a remover: ");
+        System.out.print("Indice do item a remover: ");
         int index = scanner.nextInt();
         scanner.nextLine(); 
         

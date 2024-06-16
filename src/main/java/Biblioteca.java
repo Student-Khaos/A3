@@ -28,7 +28,7 @@ public class Biblioteca {
         if (index >= 0 && index < itens.size()) {
             itens.set(index, item);
         } else {
-            System.out.println("Índice inválido.");
+            System.out.println("Indice invalido.");
         }
     }
 
@@ -42,7 +42,7 @@ public class Biblioteca {
         if (index >= 0 && index < itens.size()) {
             itens.remove(index);
         } else {
-            System.out.println("Índice inválido.");
+            System.out.println("Indice invalido.");
         }
     }
 
