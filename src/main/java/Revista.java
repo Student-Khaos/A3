@@ -36,7 +36,7 @@ public class Revista extends Item {
     
     @Override
     public void exibirDetalhes() {
-        System.out.println("Revista: " + titulo + ", Autor: " + autor + ", Ano: " + ano + ", Edição: " + edicao);
+        System.out.println("Revista: " + titulo + ", Autor: " + autor + ", Ano: " + ano + ", Edicao: " + edicao);
     }
 }
 

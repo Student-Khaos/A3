@@ -73,12 +73,14 @@ public class Principal {
             String genero = scanner.nextLine();
             Livro livro = new Livro(titulo, autor, ano, genero);
             biblioteca.inserirItem(livro);
+            System.out.println("Livro inserido com sucesso.");
         } else if (tipo == 'R' || tipo == 'r') {
             System.out.print("Edicao: ");
             int edicao = scanner.nextInt();
             scanner.nextLine(); 
             Revista revista = new Revista(titulo, autor, ano, edicao);
             biblioteca.inserirItem(revista);
+            System.out.println("Revista inserida com sucesso.");
         } else {
             System.out.println("Tipo invalido.");
         }
@@ -105,12 +107,14 @@ public class Principal {
             String genero = scanner.nextLine();
             Livro livro = new Livro(titulo, autor, ano, genero);
             biblioteca.alterarItem(index, livro);
+            System.out.println("Livro alterado com sucesso.");
         } else if (tipo == 'R' || tipo == 'r') {
             System.out.print("Edicao: ");
             int edicao = scanner.nextInt();
             scanner.nextLine();  
             Revista revista = new Revista(titulo, autor, ano, edicao);
             biblioteca.alterarItem(index, revista);
+            System.out.println("Revista alterado com sucesso.");
         } else {
             System.out.println("Tipo invalido.");
         }
@@ -122,6 +126,7 @@ public class Principal {
         scanner.nextLine(); 
         
         biblioteca.removerItem(index);
+        System.out.println("Item removido com sucesso.");
     }
      private static void listarItens(Biblioteca biblioteca) {
         biblioteca.listarItens();

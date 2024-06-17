@@ -37,7 +37,7 @@ public class Livro extends Item {
      */
     @Override
     public void exibirDetalhes() {
-        System.out.println("Livro: " + titulo + ", Autor: " + autor + ", Ano: " + ano + ", Gênero: " + genero);
+        System.out.println("Livro: " + titulo + ", Autor: " + autor + ", Ano: " + ano + ", Genero: " + genero);
     }
 }
 
